@@ -82,3 +82,34 @@ body {
   background-color: var(--light-color);
   color: var(--dark-color);
 }
+
+/* Animation */
+#page-1 > h1 {
+  transform: translateY(-1200px);
+
+  animation-name: anim-heading;
+  animation-duration: var(--animate-speed);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#page-1 > p {
+  transform: translateX(-2000px);
+  animation-name: anim-paragraph;
+  animation-duration: var(--animate-speed);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes anim-heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes anim-paragraph {
+  to {
+    transform: translateX(0);
+  }
+}
